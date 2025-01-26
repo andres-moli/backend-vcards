@@ -32,8 +32,11 @@ export class CardsService extends CrudServiceFrom(serviceStructure) {
       entity.user = await this.usersService.findOne(context,createInput.userId,true)
     }
   }
-  async createTransaction(queryRunner: QueryRunner, cardInput: CreateCardInput){
+  async createTransaction(queryRunner: QueryRunner, cardInput: CreateCardInput, imageProfileId?: string){
     const newCard = this.getRepository({user: undefined}).create(cardInput);
+    if(imageProfileId){
+      newCard.imageProfile = await this.filesService.findOne({user: undefined},imageProfileId,true)
+    }
     return await queryRunner.manager.save(newCard);
   }
 }

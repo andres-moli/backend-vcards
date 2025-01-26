@@ -7,11 +7,13 @@ import { CardsPhoneModule } from '../cardsPhone/cardPhone.module';
 import { CardsWebModule } from '../cardsWeb/cardWeb.module';
 import { CardsSocialModule } from '../cardsSocial/cardSocial.module';
 import { CardsAddressModule } from '../cardsAddress/cardAddress.module';
+import { FilesModule } from 'src/general/files/files.module';
 
 @Module({
   providers: [CardsCreateService, CardsCreateResolver],
   imports: [
     CardsModule,CardsEmailModule,CardsPhoneModule,CardsWebModule,CardsSocialModule,CardsAddressModule,
+    FilesModule
   ]
 })
 export class CardsCreateModule {}

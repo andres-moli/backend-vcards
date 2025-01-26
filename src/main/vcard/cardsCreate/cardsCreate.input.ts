@@ -5,10 +5,14 @@ import { CreateCardPhoneInput } from '../cardsPhone/dto/inputs/create-card.input
 import { CreateCardSocialInput } from '../cardsSocial/dto/inputs/create-cardSocial.input';
 import { CreateCardWebInput } from '../cardsWeb/dto/inputs/create-cardWeb.input';
 import { CreateCardAddressInput } from '../cardsAddress/dto/inputs/create-cardAddress.input';
-import { IsArray, IsObject } from 'class-validator';
+import { IsArray, IsObject, IsString } from 'class-validator';
 
 @InputType()
 export class CardsCreateInput {
+
+  @Field(()=> String)
+  @IsString()
+  imageProfileId: string
   @Field(()=> CreateCardInput)
   @IsObject()
   card: CreateCardInput

@@ -9,6 +9,7 @@ import { CardsWebService } from '../cardsWeb/services/cardWeb.service';
 import { CardsAddressService } from '../cardsAddress/services/cardAddres.service';
 import { IContext } from 'src/patterns/crud-pattern/interfaces/context.interface';
 import { DataSource } from 'typeorm';
+import { FilesService } from 'src/general/files/services/files.service';
 
 @Injectable()
 export class CardsCreateService {
@@ -20,6 +21,7 @@ export class CardsCreateService {
     private readonly cardsWeb: CardsWebService,
     private readonly cardsAddress: CardsAddressService,
     private readonly dataSource: DataSource, 
+  
   ){}
 
   async create(context: IContext, cardInput: CardsCreateInput) {
@@ -27,7 +29,7 @@ export class CardsCreateService {
     await queryRunner.startTransaction();
     try {
       // 1. Crear la tarjeta principal (Cards)
-      const newCard = await this.cardsService.createTransaction(queryRunner, cardInput.card);
+      const newCard = await this.cardsService.createTransaction(queryRunner, cardInput.card,cardInput.imageProfileId);
 
       // 2. Crear los emails asociados a la tarjeta
       await this.cardsEmail.createTransaction(queryRunner, newCard, cardInput.cardEmail);
