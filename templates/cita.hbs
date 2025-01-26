@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Cita</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .header img {
+            max-width: 150px;
+        }
+        .info {
+            background-color: #f9fafb;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            margin-bottom: 20px;
+        }
+        .info p {
+            font-size: 16px;
+            color: #555;
+            margin: 10px 0;
+        }
+        .info strong {
+            color: #333;
+        }
+        .section-title {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+        .status {
+            text-align: center;
+            padding: 15px;
+            background-color: #e7f4ff;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #3498db;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            font-size: 12px;
+            color: #aaa;
+            margin-top: 40px;
+        }
+        .divider {
+            height: 1px;
+            background-color: #ddd;
+            margin: 20px 0;
+        }
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .info-item:last-child {
+            border-bottom: none;
+        }
+        .info-item span {
+            color: #777;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <img src="{{urlIconCompany}}" alt="Logo Empresa">
+        </div>
+        
+        <h1>Información de Cita</h1>
+        
+        <!-- Cita Information -->
+        <div class="info">
+            <div class="section-title">Detalles de la Cita</div>
+            
+            <div class="info-item">
+                <strong>Título:</strong>
+                <span>{{title}}</span>
+            </div>
+            <div class="info-item">
+                <strong>Fecha y Hora:</strong>
+                <span>{{date}}</span>
+            </div>
+            <div class="info-item">
+                <strong>Duración:</strong>
+                <span>{{duration}} minutos</span>
+            </div>
+            <div class="info-item">
+                <strong>Cliente:</strong>
+                <span>{{clientName}}</span>
+            </div>
+            <div class="info-item">
+                <strong>Servicio:</strong>
+                <span>{{serviceName}}</span>
+            </div>
+            <div class="info-item">
+                <strong>Trabajador:</strong>
+                <span>{{workerName}}</span>
+            </div>
+            <div class="info-item">
+                <strong>Empresa:</strong>
+                <span>{{companyName}}</span>
+            </div>
+            <div class="info-item">
+                <strong>Notas:</strong>
+                <span>{{notes}}</span>
+            </div>
+        </div>
+
+        <!-- Status -->
+        <div class="status">
+            Estado de la Cita: {{status}}
+        </div>
+
+        <!-- Divider -->
+        <div class="divider"></div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 {{companyName}}. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>

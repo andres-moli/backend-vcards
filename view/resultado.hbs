@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resultado</title>
+</head>
+<body>
+  <h1>Resultado de la operación</h1>
+  {{#if (eq status 'aceptado')}}
+    <p>El elemento ha sido aceptado.</p>
+  {{else if (eq status 'rechazado')}}
+    <p>El elemento ha sido rechazado.</p>
+  {{else}}
+    <p>Estado desconocido.</p>
+  {{/if}}
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informe de Flujo de Caja</title>
+</head>
+<body>
+  <h2>Informe de Flujo de Caja - {{company.name}}</h2>
+  <p><strong>Fecha:</strong> {{date}}</p>
+  <p><strong>Descripción:</strong> {{description}}</p>
+
+  <h3>Resumen de Transacciones</h3>
+  <table border="1" cellpadding="8" cellspacing="0">
+    <tr>
+      <th>Tipo de Transacción</th>
+      <th>Total</th>
+    </tr>
+    <tr>
+      <td><strong>Total Entrada</strong></td>
+      <td><strong>{{total_entrada}}</strong></td>
+    </tr>
+    <tr>
+      <td>Total Entrada Efectivo</td>
+      <td>{{total_entrada_efectivo}}</td>
+    </tr>
+    <tr>
+      <td>Total Entrada Transferencia</td>
+      <td>{{total_entrada_transferencia}}</td>
+    </tr>
+    <tr>
+      <td><strong>Total Salida</strong></td>
+      <td><strong>{{total_salida}}</strong></td>
+    </tr>
+    <tr>
+      <td>Total Salida Efectivo</td>
+      <td>{{total_salida_efectivo}}</td>
+    </tr>
+    <tr>
+      <td>Total Salida Transferencia</td>
+      <td>{{total_salida_transferencia}}</td>
+    </tr>
+    <tr>
+      <td><strong>Total Vendido Producto</strong></td>
+      <td><strong>{{total_vendido_producto}}</strong></td>
+    </tr>
+    <tr>
+      <td>Total Vendido Producto Efectivo</td>
+      <td>{{total_vendido_producto_efectivo}}</td>
+    </tr>
+    <tr>
+      <td>Total Vendido Producto Transferencia</td>
+      <td>{{total_vendido_producto_transferencia}}</td>
+    </tr>
+    <tr>
+      <td><strong>Total Vendido Cita</strong></td>
+      <td><strong>{{total_vendido_cita}}</strong></td>
+    </tr>
+    <tr>
+      <td>Total Vendido Cita Efectivo</td>
+      <td>{{total_vendido_cita_efectivo}}</td>
+    </tr>
+    <tr>
+      <td>Total Vendido Cita Transferencia</td>
+      <td>{{total_vendido_cita_transferencia}}</td>
+    </tr>
+    <tr>
+      <td><strong>Total Gasto</strong></td>
+      <td><strong>{{total_gasto}}</strong></td>
+    </tr>
+    <tr>
+      <td>Total Gasto Efectivo</td>
+      <td>{{total_gasto_efectivo}}</td>
+    </tr>
+    <tr>
+      <td>Total Gasto Transferencia</td>
+      <td>{{total_gasto_transferencia}}</td>
+    </tr>
+    <tr>
+      <td><strong>Total Recaudado<strong></td>
+      <td><strong>{{total_recuado}}<strong></td>
+    </tr>
+    <tr>
+      <td><strong>Saldo</strong></td>
+      <td><strong>{{saldo}}</strong></td>
+    </tr>
+    <tr>
+      <td>Saldo Efectivo</td>
+      <td>{{saldo_efectivo}}</td>
+    </tr>
+    <tr>
+      <td>Saldo Transferencia</td>
+      <td>{{saldo_transferencia}}</td>
+    </tr>
+  </table>
+
+  <h3>Información adicional</h3>
+  <p><strong>Usuario:</strong> {{user.name}}</p>
+  <p><strong>Estado de la Caja:</strong> {{status}}</p>
+</body>
+</html>
